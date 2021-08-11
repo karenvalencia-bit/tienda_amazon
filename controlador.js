@@ -184,6 +184,11 @@ function limpiarCarrito(){
     linea2.classList.remove("visible");
     linea2.classList.add("invisible");
 
+    let pildora=document.getElementById("pildora");
+    pildora.classList.remove("visible");
+    pildora.classList.add("invisible");
+
+
 
 
 
