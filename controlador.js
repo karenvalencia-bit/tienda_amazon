@@ -61,8 +61,17 @@ function capturarDatos(){
      costoTotal=document.getElementById("costoTotal");
     costoTotal.textContent=`Costo Total $${(calcularImpuestos(precioConsola,cantidad))+(calcularCostoCasillero(pesoConsola,cantidad))}USD`;
 
-    let convertirCop=document.getElementById("convertirCop");
-    convertirCop.textContent=`el costo en pesos es: $${convertirPesos(costoTotal)}`
+    let linea1=document.getElementById("linea1");
+    linea1.classList.remove("invisible");
+    linea1.classList.add("visible");
+
+    let linea2=document.getElementById("linea2");
+    linea2.classList.remove("invisible");
+    linea2.classList.add("visible");
+
+
+
+
 }
  
 function seleccionarConsola(opcion){
@@ -140,7 +149,44 @@ function calcularImpuestos(precioConsola,cantidad){
 
 function limpiarCarrito(){
 
-    console.log("hiciste clic en limpiar");
+    let fotocarrito=document.getElementById("fotocarrito");
+    fotocarrito.src="img/fotoCarrito.png";
+
+    let titulo=document.getElementById("titulo");
+    titulo.textContent="Tu carrito amazon esta vacio";
+
+    let titulocarrito=document.getElementById("tituloCarrito");
+    titulocarrito.textContent="se han borrado los productos"
+
+    let precioIndividual=document.getElementById("precioUnitarioCarrito");
+    precioIndividual.textContent="";
+
+    let pesoIndividual=document.getElementById("pesoUnitarioCarrito");
+    pesoIndividual.textContent="";
+
+    let pesoTotal=document.getElementById("pesoTotalCarrito");
+    pesoTotal.textContent="";
+
+    let costoCasillero=document.getElementById("costoCasillero");
+    costoCasillero.textContent="";
+
+    let costoImpuestos=document.getElementById("costoImpuesto");
+    costoImpuestos.textContent="";
+    
+    let costoTotal=document.getElementById("costoTotal");
+    costoTotal.textContent="";
+
+    let linea1=document.getElementById("linea1");
+    linea1.classList.remove("visible");
+    linea1.classList.add("invisible");
+
+    let linea2=document.getElementById("linea2");
+    linea2.classList.remove("visible");
+    linea2.classList.add("invisible");
+
+
+
+
 }
 
 function convertirPesos(cantidadDolares){
@@ -148,4 +194,7 @@ function convertirPesos(cantidadDolares){
     const dolares=3.932;
     let conversion=dolares*cantidadDolares;
     return conversion;
+
+    let convertiracop=document.getElementById("convertirCop");
+    convertiracop.textContent=conversion;
 }

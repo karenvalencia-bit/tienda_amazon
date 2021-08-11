@@ -109,8 +109,8 @@
                             <div class="mb-3">
                                 <label class="form-label ">Selecciona el producto:</label>
                                 <select class="form-select" id="productos">
-                                    <option value="0"selected >elija su opcion</option>
-                                    <option value="1" >PS5</option>
+                                   
+                                    <option value="1" selected >PS5</option>
                                     <option value="2">XBOX X SERIES</option>
                                     <option value="3">NINTENDO SWITCH</option>
                                 </select>
@@ -142,7 +142,7 @@
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header bg-dark">
-                  <h5 class="modal-title text-light" id="exampleModalLabel">RESUMEN DE COMPRA</h5>
+                  <h5 class="modal-title text-light" id="titulo">RESUMEN DE COMPRA</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -152,23 +152,23 @@
 
                              
                             <img src="img/fotoCarrito.png" alt="img1" class="img-fluid" id="fotocarrito">
-                            <hr>
+                            <hr class="invisible" id="linea1">
                             <p id="pesoTotalCarrito"></p>
                             <p class=" fw-bold" id="costoCasillero"></p>
                           </div>
 
                           <div class="col-6">
-                              <h1 id="tituloCarrito">Tu carrito amazon esta vacio</h1>
+                              <h5 class="align-self-center" id="tituloCarrito">Tu carrito amazon esta vacio</h5>
                               <p id="precioUnitarioCarrito"></p>
                               <p id="pesoUnitarioCarrito"></p>
 
-                              <hr>
+                              <hr class="invisible" id="linea2">
 
                               <p class=" fw-bold" id="costoImpuesto"></p>
 
                               <h5 id="costoTotal"></h5>
 
-                              <h4 id="convertirCop"></h4>
+                              <button type="button" class="btn btn bg-warning" id="botonPesos"><i class="fas fa-search-dollar"></i>  convertir a cop</button>
 
                           </div>
                       </div>
@@ -177,7 +177,7 @@
                 <div class="modal-footer">
                   <button type="button" class="btn btn-warning" id="botonLimpiar">Limpiar<i class= "ms-2 fas fa-trash-alt"></i></button>
                   <button type="button" class="btn btn-dark" id="botonComprar">comprar</button>
-                  <button type="button" class="btn colorb" id="botonPesos">conver $COP</button>
+                  
                 </div>
               </div>
             </div>
