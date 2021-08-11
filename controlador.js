@@ -3,14 +3,19 @@ let nombreConsola
 let precioConsola
 let pesoConsola
 let fotoConsola
+let costoTotal
 
 //boton del formulario 
 let boton=document.getElementById("boton");
-console.log(boton);
+let botonLimpiar=document.getElementById("botonLimpiar");
+let botonPesos=document.getElementById("botonPesos");
+
 
 //identificar cuando da click boton
 
 boton.addEventListener("click", capturarDatos);//calback
+botonLimpiar.addEventListener("click", limpiarCarrito);
+botonPesos.addEventListener("click", convertirPesos);
 
 //3.CREAR FUNCION PROPIA QUE SE LLAMO 2
 function capturarDatos(){
@@ -49,6 +54,15 @@ function capturarDatos(){
 
     let costoCasillero=document.getElementById("costoCasillero");
     costoCasillero.textContent=`Costo Casillero: $${calcularCostoCasillero(pesoConsola,cantidad)} USD`;
+
+    let costoImpuestos=document.getElementById("costoImpuesto");
+    costoImpuestos.textContent=`costo venta(impuestos): $${calcularImpuestos(precioConsola,cantidad)} USD`;
+    
+     costoTotal=document.getElementById("costoTotal");
+    costoTotal.textContent=`Costo Total $${(calcularImpuestos(precioConsola,cantidad))+(calcularCostoCasillero(pesoConsola,cantidad))}USD`;
+
+    let convertirCop=document.getElementById("convertirCop");
+    convertirCop.textContent=`el costo en pesos es: $${convertirPesos(costoTotal)}`
 }
  
 function seleccionarConsola(opcion){
@@ -111,4 +125,27 @@ function calcularCostoCasillero(pesoConsola,cantidad){
     }
 
     return costoCasillero;
+}
+
+function calcularImpuestos(precioConsola,cantidad){
+
+    const IMPUESTO_PAIS=114;
+    const VALOR_SEGURO=7;
+
+    let costoCompra=precioConsola*cantidad;
+    let costoTotal=costoCompra+VALOR_SEGURO+IMPUESTO_PAIS
+
+    return costoTotal;
+}
+
+function limpiarCarrito(){
+
+    console.log("hiciste clic en limpiar");
+}
+
+function convertirPesos(cantidadDolares){
+
+    const dolares=3.932;
+    let conversion=dolares*cantidadDolares;
+    return conversion;
 }

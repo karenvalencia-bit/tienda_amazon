@@ -141,15 +141,20 @@
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Modal t</h5>
+                <div class="modal-header bg-dark">
+                  <h5 class="modal-title text-light" id="exampleModalLabel">RESUMEN DE COMPRA</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                   <div class="container">
                       <div class="row">
                           <div class="col-6">
-                              <img src="img/fotoCarrito.png" alt="img1" class="img-fluid" id="fotocarrito">
+
+                             
+                            <img src="img/fotoCarrito.png" alt="img1" class="img-fluid" id="fotocarrito">
+                            <hr>
+                            <p id="pesoTotalCarrito"></p>
+                            <p class=" fw-bold" id="costoCasillero"></p>
                           </div>
 
                           <div class="col-6">
@@ -157,18 +162,22 @@
                               <p id="precioUnitarioCarrito"></p>
                               <p id="pesoUnitarioCarrito"></p>
 
-                              <br>
+                              <hr>
 
-                              <h4 id="pesoTotalCarrito"></h4>
-                              <h4  class="text-success fw-bold" id="costoCasillero"></h4>
+                              <p class=" fw-bold" id="costoImpuesto"></p>
+
+                              <h5 id="costoTotal"></h5>
+
+                              <h4 id="convertirCop"></h4>
 
                           </div>
                       </div>
                   </div>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
+                  <button type="button" class="btn btn-warning" id="botonLimpiar">Limpiar<i class= "ms-2 fas fa-trash-alt"></i></button>
+                  <button type="button" class="btn btn-dark" id="botonComprar">comprar</button>
+                  <button type="button" class="btn colorb" id="botonPesos">conver $COP</button>
                 </div>
               </div>
             </div>
