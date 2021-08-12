@@ -76,10 +76,10 @@ function capturarDatos(){
  
 function seleccionarConsola(opcion){
 let consolas={ 
-    nombres:Array("PS5","XBOX Serie X", "Nintendo Switch"),
-     precios:Array(750,700,409), 
-     pesos:Array(14.2,13.1,4.75),
-     fotos:Array("https://github.com/jjosegallegocesde/imagenes-amazon/blob/main/img/ps5.jpg?raw=true","https://github.com/jjosegallegocesde/imagenes-amazon/blob/main/img/xbox.jpg?raw=true","https://github.com/jjosegallegocesde/imagenes-amazon/blob/main/img/nintendo.jpg?raw=true")
+    nombres:Array("PS5","XBOX Serie X", "Nintendo Switch","Vestidos Hawaianos"),
+     precios:Array(750,700,409,23.99), 
+     pesos:Array(14.2,13.1,4.75,1.56),
+     fotos:Array("https://github.com/jjosegallegocesde/imagenes-amazon/blob/main/img/ps5.jpg?raw=true","https://github.com/jjosegallegocesde/imagenes-amazon/blob/main/img/xbox.jpg?raw=true","https://github.com/jjosegallegocesde/imagenes-amazon/blob/main/img/nintendo.jpg?raw=true","img/vestido2")
      }
 
      
@@ -103,6 +103,14 @@ let consolas={
         precioConsola=consolas.precios[2];
         pesoConsola=consolas.pesos[2];
         fotoConsola=consolas.fotos[2];
+
+    }
+    else if(opcion==4){
+
+        nombreConsola=consolas.nombres[3];
+        precioConsola=consolas.precios[3];
+        pesoConsola=consolas.pesos[3];
+        fotoConsola=consolas.fotos[3];
 
     }else{
         nombreConsola=null;
