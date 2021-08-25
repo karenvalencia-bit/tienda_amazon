@@ -76,10 +76,10 @@ function capturarDatos(){
  
 function seleccionarConsola(opcion){
 let consolas={ 
-    nombres:Array("PS5","XBOX Serie X", "Nintendo Switch","Vestidos Hawaianos"),
-     precios:Array(750,700,409,23.99), 
-     pesos:Array(14.2,13.1,4.75,1.56),
-     fotos:Array("https://github.com/jjosegallegocesde/imagenes-amazon/blob/main/img/ps5.jpg?raw=true","https://github.com/jjosegallegocesde/imagenes-amazon/blob/main/img/xbox.jpg?raw=true","https://github.com/jjosegallegocesde/imagenes-amazon/blob/main/img/nintendo.jpg?raw=true","https://github.com/karenvalencia-bit/tienda_amazon/blob/main/img/vestido2.PNG?raw=true")
+    nombres:Array("PS5","XBOX Serie X", "Nintendo Switch","Vestidos Hawaianos","Oculus Quest-Virtual Reality","Sandalia Tacon"),
+     precios:Array(750,700,409,23.99,299.00, 23.99), 
+     pesos:Array(14.2,13.1,4.75,1.56,128,0),
+     fotos:Array("https://github.com/jjosegallegocesde/imagenes-amazon/blob/main/img/ps5.jpg?raw=true","https://github.com/jjosegallegocesde/imagenes-amazon/blob/main/img/xbox.jpg?raw=true","https://github.com/jjosegallegocesde/imagenes-amazon/blob/main/img/nintendo.jpg?raw=true","https://github.com/karenvalencia-bit/tienda_amazon/blob/main/img/vestido2.PNG?raw=true","https://github.com/karenvalencia-bit/imagenes/blob/main/img/virtual.PNG?raw=true","https://github.com/karenvalencia-bit/imagenes/blob/main/img/tacon.PNG?raw=true")
      }
 
      
@@ -111,6 +111,22 @@ let consolas={
         precioConsola=consolas.precios[3];
         pesoConsola=consolas.pesos[3];
         fotoConsola=consolas.fotos[3];
+
+    }
+    else if(opcion==5){
+
+        nombreConsola=consolas.nombres[4];
+        precioConsola=consolas.precios[4];
+        pesoConsola=consolas.pesos[4];
+        fotoConsola=consolas.fotos[4];
+
+    }
+    else if(opcion==6){
+
+        nombreConsola=consolas.nombres[5];
+        precioConsola=consolas.precios[5];
+        pesoConsola=consolas.pesos[5];
+        fotoConsola=consolas.fotos[5];
 
     }else{
         nombreConsola=null;
