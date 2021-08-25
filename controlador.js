@@ -47,7 +47,7 @@ function capturarDatos(){
     precioIndividual.textContent=`costo unitario $${precioConsola} USD`
 
     let pesoIndividual=document.getElementById("pesoUnitarioCarrito");
-    pesoIndividual.textContent=`peso de la consola ${pesoConsola}LB...`
+    pesoIndividual.textContent=`peso del producto ${pesoConsola}LB...`
 
     let pesoTotal=document.getElementById("pesoTotalCarrito");
     pesoTotal.textContent=`Peso Total de la compra: ${pesoConsola*cantidad} Lb`;
@@ -76,10 +76,10 @@ function capturarDatos(){
  
 function seleccionarConsola(opcion){
 let consolas={ 
-    nombres:Array("PS5","XBOX Serie X", "Nintendo Switch","Vestidos Hawaianos","Oculus Quest-Virtual Reality","Sandalia Tacon"),
-     precios:Array(750,700,409,23.99,299.00, 23.99), 
-     pesos:Array(14.2,13.1,4.75,1.56,128,0),
-     fotos:Array("https://github.com/jjosegallegocesde/imagenes-amazon/blob/main/img/ps5.jpg?raw=true","https://github.com/jjosegallegocesde/imagenes-amazon/blob/main/img/xbox.jpg?raw=true","https://github.com/jjosegallegocesde/imagenes-amazon/blob/main/img/nintendo.jpg?raw=true","https://github.com/karenvalencia-bit/tienda_amazon/blob/main/img/vestido2.PNG?raw=true","https://github.com/karenvalencia-bit/imagenes/blob/main/img/virtual.PNG?raw=true","https://github.com/karenvalencia-bit/imagenes/blob/main/img/tacon.PNG?raw=true")
+    nombres:Array("PS5","XBOX Serie X", "Nintendo Switch","Vestidos Hawaianos","Oculus Quest-Virtual Reality","Sandalia Tacon","Bolsas-Mochilas","Accesorios","LASHVIEW Kit de elevación de pestañas","Led Usto"),
+     precios:Array(750,700,409,23.99,299.00, 23.99, 21.34, 8.55, 20.39, 14.44 ), 
+     pesos:Array(14.2,13.1,4.75,1.56,128,0, 1.6,0,1.54,1.2),
+     fotos:Array("https://github.com/jjosegallegocesde/imagenes-amazon/blob/main/img/ps5.jpg?raw=true","https://github.com/jjosegallegocesde/imagenes-amazon/blob/main/img/xbox.jpg?raw=true","https://github.com/jjosegallegocesde/imagenes-amazon/blob/main/img/nintendo.jpg?raw=true","https://github.com/karenvalencia-bit/tienda_amazon/blob/main/img/vestido2.PNG?raw=true","https://github.com/karenvalencia-bit/imagenes/blob/main/img/virtual.PNG?raw=true","https://github.com/karenvalencia-bit/imagenes/blob/main/img/tacon.PNG?raw=true","https://github.com/karenvalencia-bit/imagenes/blob/main/img/bolso.PNG?raw=true","https://github.com/karenvalencia-bit/imagenes/blob/main/img/accesorios.png?raw=true","https://github.com/karenvalencia-bit/imagenes/blob/main/img/lift.PNG?raw=true","https://github.com/karenvalencia-bit/imagenes/blob/main/img/led.PNG?raw=true")
      }
 
      
@@ -127,6 +127,46 @@ let consolas={
         precioConsola=consolas.precios[5];
         pesoConsola=consolas.pesos[5];
         fotoConsola=consolas.fotos[5];
+
+    }
+    else if(opcion==7){
+
+        nombreConsola=consolas.nombres[6];
+        precioConsola=consolas.precios[6];
+        pesoConsola=consolas.pesos[6];
+        fotoConsola=consolas.fotos[6];
+
+    }
+    else if(opcion==8){
+
+        nombreConsola=consolas.nombres[7];
+        precioConsola=consolas.precios[7];
+        pesoConsola=consolas.pesos[7];
+        fotoConsola=consolas.fotos[7];
+
+    }
+    else if(opcion==9){
+
+        nombreConsola=consolas.nombres[8];
+        precioConsola=consolas.precios[8];
+        pesoConsola=consolas.pesos[8];
+        fotoConsola=consolas.fotos[8];
+
+    }
+    else if(opcion==10){
+
+        nombreConsola=consolas.nombres[9];
+        precioConsola=consolas.precios[9];
+        pesoConsola=consolas.pesos[9];
+        fotoConsola=consolas.fotos[9];
+
+    }
+    else if(opcion==11){
+
+        nombreConsola=consolas.nombres[10];
+        precioConsola=consolas.precios[10];
+        pesoConsola=consolas.pesos[10];
+        fotoConsola=consolas.fotos[10];
 
     }else{
         nombreConsola=null;
