@@ -76,10 +76,10 @@ function capturarDatos(){
  
 function seleccionarConsola(opcion){
 let consolas={ 
-    nombres:Array("PS5","XBOX Serie X", "Nintendo Switch","Vestidos Hawaianos","Oculus Quest-Virtual Reality","Sandalia Tacon","Bolsas-Mochilas","Accesorios","LASHVIEW Kit de elevación de pestañas","Led Usto"),
-     precios:Array(750,700,409,23.99,299.00, 23.99, 21.34, 8.55, 20.39, 14.44 ), 
-     pesos:Array(14.2,13.1,4.75,1.56,128,0, 1.6,0,1.54,1.2),
-     fotos:Array("https://github.com/jjosegallegocesde/imagenes-amazon/blob/main/img/ps5.jpg?raw=true","https://github.com/jjosegallegocesde/imagenes-amazon/blob/main/img/xbox.jpg?raw=true","https://github.com/jjosegallegocesde/imagenes-amazon/blob/main/img/nintendo.jpg?raw=true","https://github.com/karenvalencia-bit/tienda_amazon/blob/main/img/vestido2.PNG?raw=true","https://github.com/karenvalencia-bit/imagenes/blob/main/img/virtual.PNG?raw=true","https://github.com/karenvalencia-bit/imagenes/blob/main/img/tacon.PNG?raw=true","https://github.com/karenvalencia-bit/imagenes/blob/main/img/bolso.PNG?raw=true","https://github.com/karenvalencia-bit/imagenes/blob/main/img/accesorios.png?raw=true","https://github.com/karenvalencia-bit/imagenes/blob/main/img/lift.PNG?raw=true","https://github.com/karenvalencia-bit/imagenes/blob/main/img/led.PNG?raw=true")
+    nombres:Array("PS5","XBOX Serie X", "Nintendo Switch","Vestidos Hawaianos","Oculus Quest-Virtual Reality","Sandalia Tacon","Bolsas-Mochilas","Accesorios","LASHVIEW Kit de elevación de pestañas","Led Usto","Selfie Anillo De Luz","Cepillo Ionico Alisador","Carro Hummer"),
+     precios:Array(750,700,409,23.99,299.00, 23.99, 21.34, 8.55, 20.39, 14.44, 65.66, 82.56, 205.595 ), 
+     pesos:Array(14.2,13.1,4.75,1.56,128,0, 1.6,0,1.54,1.2,2.65, 0.56, 48.58),
+     fotos:Array("https://github.com/jjosegallegocesde/imagenes-amazon/blob/main/img/ps5.jpg?raw=true","https://github.com/jjosegallegocesde/imagenes-amazon/blob/main/img/xbox.jpg?raw=true","https://github.com/jjosegallegocesde/imagenes-amazon/blob/main/img/nintendo.jpg?raw=true","https://github.com/karenvalencia-bit/tienda_amazon/blob/main/img/vestido2.PNG?raw=true","https://github.com/karenvalencia-bit/imagenes/blob/main/img/virtual.PNG?raw=true","https://github.com/karenvalencia-bit/imagenes/blob/main/img/tacon.PNG?raw=true","https://github.com/karenvalencia-bit/imagenes/blob/main/img/bolso.PNG?raw=true","https://github.com/karenvalencia-bit/imagenes/blob/main/img/accesorios.png?raw=true","https://github.com/karenvalencia-bit/imagenes/blob/main/img/lift.PNG?raw=true","https://github.com/karenvalencia-bit/imagenes/blob/main/img/led.PNG?raw=true","https://github.com/karenvalencia-bit/imagenes/blob/main/img/anilloluz.PNG?raw=true","https://github.com/karenvalencia-bit/imagenes/blob/main/img/ceppillo.PNG?raw=true")
      }
 
      
@@ -167,6 +167,22 @@ let consolas={
         precioConsola=consolas.precios[10];
         pesoConsola=consolas.pesos[10];
         fotoConsola=consolas.fotos[10];
+
+    }
+    else if(opcion==12){
+
+        nombreConsola=consolas.nombres[11];
+        precioConsola=consolas.precios[11];
+        pesoConsola=consolas.pesos[11];
+        fotoConsola=consolas.fotos[11];
+
+    }
+    else if(opcion==13){
+
+        nombreConsola=consolas.nombres[12];
+        precioConsola=consolas.precios[12];
+        pesoConsola=consolas.pesos[12];
+        fotoConsola=consolas.fotos[12];
 
     }else{
         nombreConsola=null;
