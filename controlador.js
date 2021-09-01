@@ -4,6 +4,7 @@ let precioConsola
 let pesoConsola
 let fotoConsola
 let costoTotal
+let moneda=true;
 
 //boton del formulario 
 let boton=document.getElementById("boton");
@@ -15,7 +16,7 @@ let botonPesos=document.getElementById("botonPesos");
 
 boton.addEventListener("click", capturarDatos);//calback
 botonLimpiar.addEventListener("click", limpiarCarrito);
-botonPesos.addEventListener("click", convertirPesos);
+botonPesos.addEventListener("click",CambiarMoneda);
 
 //3.CREAR FUNCION PROPIA QUE SE LLAMO 2
 function capturarDatos(){
@@ -68,6 +69,13 @@ function capturarDatos(){
     let linea2=document.getElementById("linea2");
     linea2.classList.remove("invisible");
     linea2.classList.add("visible");
+
+
+    let botonPesos=document.getElementById("botonPesos");
+    botonPesos.classList.remove("invisible");
+    botonPesos.classList.add("visible");
+
+    botonPesos.addEventListener("click",CambiarMoneda);
 
 
 
@@ -292,18 +300,81 @@ function limpiarCarrito(){
     pildora.classList.remove("visible");
     pildora.classList.add("invisible");
 
+    let botonPesos=document.getElementById("botonPesos");
+    botonPesos.classList.remove("invisible");
+    botonPesos.classList.add("visible");
+
 
 
 
 
 }
 
-function convertirPesos(cantidadDolares){
+function CambiarMoneda(){
+    if(moneda){
 
-    const dolares=3.932;
-    let conversion=dolares*cantidadDolares;
-    return conversion;
+        convertirFacturaCOP()
 
-    let convertiracop=document.getElementById("convertirCop");
-    convertiracop.textContent=conversion;
+    }else{
+
+        convertirFacturaDolares()
+
+    }
+}
+
+function convertirFacturaCOP(){
+
+    moneda=false;
+    let botonpesos=document.getElementById("botonPesos");
+    botonpesos.textContent="USD ($)"
+
+    let cantidad=document.getElementById("cantidad").value;
+
+    let precioIndividual=document.getElementById("precioUnitarioCarrito");
+    precioIndividual.textContent=`Costo unitario: $${convertiraPesos(precioConsola)} COP`;
+
+    let costoCasillero=document.getElementById("costoCasillero");
+    costoCasillero.textContent=`Costo Casillero: $${convertiraPesos(calcularCostoCasillero(pesoConsola,cantidad))} COP`;
+
+    let costoImpuestos=document.getElementById("costoImpuesto");
+    costoImpuestos.textContent=`Costo venta(impuestos):$${convertiraPesos(calcularImpuestos(precioConsola,cantidad))} COP`;
+
+    let costoTotal=document.getElementById("costoTotal");
+    costoTotal.textContent=`Costo Total: $${convertiraPesos((calcularCostoCasillero(pesoConsola,cantidad))+(calcularImpuestos(precioConsola,cantidad)))} COP`;
+
+}
+
+function convertirFacturaDolares(){
+
+    moneda=true;
+
+    let botonPesos=document.getElementById("botonPesos");
+    botonPesos.textContent="COP ($)"
+
+    let cantidad=document.getElementById("cantidad").value;
+
+    let precioIndividual=document.getElementById("precioUnitarioCarrito");
+    precioIndividual.textContent=`Costo unitario: $${precioConsola} USD`;
+
+    let costoCasillero=document.getElementById("costoCasillero");
+    costoCasillero.textContent=`Costo Casillero: $${calcularCostoCasillero(pesoConsola,cantidad)} USD`;
+
+    let costoImpuestos=document.getElementById("costoImpuestos");
+    costoImpuestos.textContent=`Costo venta(impuestos):$${calcularImpuestos(precioConsola,cantidad)} USD`;
+
+    let costoTotal=document.getElementById("costoTotal");
+    costoTotal.textContent=`Costo Total: $${(calcularCostoCasillero(pesoConsola,cantidad))+(calcularImpuestos(precioConsola,cantidad))} USD`;
+
+}
+
+
+function convertiraPesos(precioDolares){
+    
+    const TRM=3932; //3932 pesos equivalen a 1 dolar
+    let precioPesos= precioDolares*TRM;
+
+    return precioPesos;
+
+
+
 }
