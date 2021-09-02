@@ -145,6 +145,9 @@ pedidos.forEach(function(pedido){
 
     let cuerpo=document.createElement("div");
     cuerpo.classList.add("card");
+    cuerpo.classList.add("border-warning");
+    cuerpo.classList.add("border-5");
+    cuerpo.classList.add("rounded-3")
     cuerpo.classList.add("h-100");
     
     let imagen=document.createElement("img");
@@ -155,6 +158,7 @@ pedidos.forEach(function(pedido){
 
     let titulo=document.createElement("h5");
     titulo.classList.add("card-title");
+    titulo.classList.add("text-center");
     titulo.textContent=`producto: ${pedido.nombre}`;
     
     let precio=document.createElement("p");
@@ -180,7 +184,7 @@ pedidos.forEach(function(pedido){
 
     let botonactu=document.createElement("button");
     botonactu.classList.add("btn")
-    botonactu.classList.add("btn-warning")
+    botonactu.classList.add("btn-success")
     let icono2=document.createElement("i");
     icono2.classList.add("fas");
     icono2.classList.add("fa-vote-yea")

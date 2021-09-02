@@ -301,8 +301,8 @@ function limpiarCarrito(){
     pildora.classList.add("invisible");
 
     let botonPesos=document.getElementById("botonPesos");
-    botonPesos.classList.remove("invisible");
-    botonPesos.classList.add("visible");
+    botonPesos.classList.remove("visible");
+    botonPesos.classList.add("invisible");
 
 
 
@@ -318,6 +318,7 @@ function CambiarMoneda(){
     }else{
 
         convertirFacturaDolares()
+        console.log("voy para dolares");
 
     }
 }
@@ -326,7 +327,11 @@ function convertirFacturaCOP(){
 
     moneda=false;
     let botonpesos=document.getElementById("botonPesos");
-    botonpesos.textContent="USD ($)"
+    let icono=document.createElement("i");
+    icono.classList.add("fas");
+    icono.classList.add("fa-money-check-alt");
+    botonpesos.textContent="USD ";
+    botonpesos.appendChild(icono);
 
     let cantidad=document.getElementById("cantidad").value;
 
@@ -349,7 +354,12 @@ function convertirFacturaDolares(){
     moneda=true;
 
     let botonPesos=document.getElementById("botonPesos");
-    botonPesos.textContent="COP ($)"
+    let icono=document.createElement("i");
+    icono.classList.add("fas");
+    icono.classList.add("fa-coins");
+    botonPesos.textContent="COP ";
+    botonPesos.appendChild(icono);
+    
 
     let cantidad=document.getElementById("cantidad").value;
 
@@ -359,7 +369,7 @@ function convertirFacturaDolares(){
     let costoCasillero=document.getElementById("costoCasillero");
     costoCasillero.textContent=`Costo Casillero: $${calcularCostoCasillero(pesoConsola,cantidad)} USD`;
 
-    let costoImpuestos=document.getElementById("costoImpuestos");
+    let costoImpuestos=document.getElementById("costoImpuesto");
     costoImpuestos.textContent=`Costo venta(impuestos):$${calcularImpuestos(precioConsola,cantidad)} USD`;
 
     let costoTotal=document.getElementById("costoTotal");
